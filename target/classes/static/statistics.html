@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+<meta charset="UTF-8">
+<title>sendMessage</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js" ></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<link rel="stylesheet" href="css/statistics.css" />
+</head>
+
+<body style="height: 100%; margin: 0" id="body1">
+
+    	<div id="containerA" style="height: 50%;width:50%; float:left;">
+    		<div id="container" style="height: 100%;width:100%; float:left;">
+    		</div>
+    	</div>
+    	
+	<!-- 2.发送失败总数top10 -->
+		<div id="container22" style="height: 50%;width:50%;float: right;">
+			<div style="height:12px;width:100%;float: right;">
+				<form>
+						<input type="button" value="主页" class="text3" onclick="javascript:window.history.go(-1)"/>
+				</form>
+			<form/>
+				<select id="province" name="type" class="text4 text5"> 
+					<option value="">--请选择时间--</option> 
+					<option value="1">一年内</option> 
+					<option value="2">半年内</option> 
+					<option value="3">一月内 </option> 
+					<option value="4">一周内</option> 
+				</select>
+				<input type="button" value="统计" class="text4" onclick="checkForm()"/>
+			</form>	
+			</div>
+			<div id="container2" style="height:404px;width:100%;float: right;">
+			</div>
+		</div>
+	
+	
+	<!-- 3.总数前二十排名 -->
+	<div id="container3" style="height: 50%;width:50%;float:left;"></div>
+	
+	<!-- 4.指定时间发送总数和发送失败-->
+	<div id="container4" style="height: 50%;width:50%;float:right;"></div>
+
+	<script type="text/javascript" src="js/statistics.js"></script>
+</body>	
+</html>

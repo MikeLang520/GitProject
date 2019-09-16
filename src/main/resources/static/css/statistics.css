@@ -1,0 +1,49 @@
+	#body1 {
+   			background:url(/img/login-background.jpg) no-repeat;
+   			background-size : cover;  
+     		}
+     		
+  	.text3 {
+		float:right;
+	    background-color: #c31d1d; 
+	    color: white;
+	    text-align: center;
+	    font-size: 20px;
+	    border-radius: 8px;
+	   	cursor: pointer;
+	    -webkit-transition-duration: 0.4s; /* Safari */
+	    transition-duration: 0.4s;
+		}
+	
+	.text3 {
+	    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+	
+	.text3:hover {
+	    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+	
+	.text4 {
+			float:left;
+		    background-color: #c31d1d; 
+		    color: white;
+		    text-align: center;
+		    font-size: 20px;
+		    border-radius: 8px;
+		    padding:0px 38px 0px 38px;
+		   	cursor: pointer;
+		    -webkit-transition-duration: 0.4s; /* Safari */
+		    transition-duration: 0.4s;
+		}
+	
+	.text4 {
+	    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+	
+	.text4:hover {
+	    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+	
+	.text5{
+		padding:1px 0px 5px 0px;
+	}

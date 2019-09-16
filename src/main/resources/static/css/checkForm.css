@@ -1,0 +1,167 @@
+ .page {
+           color: #666;
+           display: block;
+           text-align: center;
+           height:50px;
+           margin:620px 0px auto;
+        }
+       
+      #body1 {
+	 background: url(/img/login-background.jpg) no-repeat ;
+	 background-size : cover;
+}
+ 
+.tr1 th{
+	background-color:green;	
+}
+
+.tr2 td{
+	color:black	;
+}
+
+.button{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    
+}
+.button2{
+	float:right;
+	margin:17px 0px 0px 0px;	
+}
+
+.button3{
+	margin: 2px 2px;
+ 	padding: 6px 30px;
+	}
+.button2:hover {
+ 			 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}	
+
+.button1:hover {
+ 			 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.buttono {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttono2 {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.buttont {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    float: center;
+}
+
+.buttont:hover {
+    background-color: #3e8e41;
+}	
+
+
+.buttont2{
+	 padding: 5px 10px;
+}	
+
+.text1{
+	float:left;
+	margin:2px 2px;
+	padding: 2px 29px;
+	font-size:22px;
+	background-color:green;
+	border-radius: 8px;
+}
+
+.text2{
+	width:160px;
+}
+
+#div1{
+	width:100%;
+	height:88px;
+	/* background: url(/img/timga.jpg);  */
+	margin:0;
+	
+	
+}
+
+.div2{
+	border-style:solid;
+	border-color:white;
+	border-right-color:green;
+}
+
+.div3{
+	border-color:white;	
+	border-left:none;
+	border-bottom:none;
+	border-right:none;
+	
+	
+}
+
+.buttong{
+	height:21.33px;
+	width:32px;
+}
+
+.table1{
+	border-collapse:collapse;
+	height:560px;
+	width:1367px;
+	float:right;
+	font-size:15px;
+	
+}
+
+.table1, td, th{
+	 border:1px solid black;
+}
+
+.table1,th{
+	height:62px;
+}
+
+.add{
+	padding:10px 22px;
+	margin:17px 0px 0px 0px;
+}
+
+/* 	.mycontainer input{
+           border:1px solid #ccc;
+           padding:6px 10px;
+       } */
+     
+     .a{
+     	padding:5px 0px 0px 0px;
+     }
+     
+     .b{
+     	padding:3px 12px 3px 12px;
+     }

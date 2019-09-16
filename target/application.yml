@@ -1,0 +1,32 @@
+spring:
+  thymeleaf:
+    cache: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    excluded-view-names:
+    template-resolver-order:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/spring?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: 112233
+      initialize: true
+  init-db: true
+  jpa:
+      database: mysql
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+        naming:
+          strategy: org.hibernate.cfg.ImprovedNamingStrategy
+mybatis:
+  type-aliases-package: com.southgis.imap.maintain.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+      

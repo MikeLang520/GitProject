@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.southgis.imap.maintain.mapper.CompanyMapper">
+	<insert id="save" parameterType="SmsInfo">
+		insert into SmsInfo(Caccount,Ccompany,Cmobile,Cmobile1111,Caddress,
+		Cprovince,Czip,Ctel,Cfax,Cname,Cpassword,Cquestion,Canswer,Cnote,createtime) values(#{Caccount},
+		#{Ccompany},#{Cmobile},#{Cmobile1111},#{Caddress},#{Cprovince},#{Czip},#{Ctel},
+		#{Cfax},#{Cname},#{Cpassword},#{Cquestion},#{Canswer},#{Cnote},#{createtime})
+	</insert>
+
+	<delete id="deleteById" parameterType="SmsInfo">
+		delete from SmsInfo where CID = #{id}
+	</delete>
+	
+	<select id="findById" parameterType="SmsInfo" resultType="SmsInfo">
+		select CID,Caccount,Ccompany,Cmobile,Cmobile1111,Caddress,Cprovince,Czip,Ctel,Cfax,Cname,Cpassword,Cquestion,Canswer,Cnote,createtime 
+		from SmsInfo where CID = #{id}
+	</select>
+	
+	<update id="saveAndFlush" parameterType="SmsInfo">
+		update SmsInfo set Caccount=#{Caccount},Ccompany=#{Ccompany},Cmobile=#{Cmobile},Cmobile1111=#{Cmobile1111},
+		Caddress=#{Caddress},Cprovince=#{Cprovince},Czip=#{Czip},Ctel=#{Ctel},Cfax=#{Cfax},Cname=#{Cname},
+		Cpassword=#{Cpassword},Cquestion=#{Cquestion},Canswer=#{Canswer},Cnote=#{Cnote} where CID = #{CID}
+	</update>
+	
+	<select id="findAll" resultType="SmsInfo">
+		select CID,Caccount,Ccompany,Cmobile,Cmobile1111,Caddress,Cprovince,Czip,Ctel,Cfax,Cname,
+		Cpassword,Cquestion,Canswer,Cnote,createtime from SmsInfo
+	</select>
+
+</mapper>

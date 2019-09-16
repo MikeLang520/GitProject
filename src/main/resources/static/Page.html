@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>显示页面</title>
+
+<script type="text/javascript" src="/js/jquery-3.4.1.min.js" ></script>
+<script type="text/javascript" src="js/jquery.pagination.min.js"></script>
+<script type="text/javascript" src="/js/dateTime.min.js"></script>
+<script type="text/javascript" src="js/checkForm.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/Page.css">
+<link rel="stylesheet" href="/css/dateTime.css">
+<link rel="stylesheet" href="css/jquery.pagination.css" />
+<link rel="stylesheet" href="css/checkForm.css" />
+
+</head>
+<body id="body1">
+	
+	<div id="div1" >
+		<p style="font-size:20px;color:green;">用户信息管理界面</p>
+		<form>
+			<input type="button" value="注销用户" class="button button2 " onclick="cancel()"/>
+		</form>
+		
+		<form>
+			<input type="button" value="添  加" class="button button1 add" onclick="add()"/>
+		</form>
+	</div>
+	
+	<div style="height:725px;width:19.68%;float:left;" class="div2">
+				
+		<p style="font-size:20px;color:red;">统计功能：<p><br>
+		<form>
+			<input type="button" value="统计用户" onclick="checkForm3()" class="button button2 text1"/>
+		</form>	<br><br><br><hr>
+	
+		<p style="font-size:20px;color:red;">根据用户账户搜索功能：<p><br>
+		<!-- 根据用户账号搜索-->
+	    <form>
+	  		<input type="text" id="page1" class="text1 text2" value="用户账户查询"/>
+			<input type="button" value="搜索" onclick="checkForm()" class="button button1 button3 text1"/>
+		</form>	<br><br><br>
+		
+	<!-- 根据时间查找功能  -->
+	
+		<div class="mycontainer">
+			<form/>
+				<input type="text" placeholder="请选择日期和时间" id="datetime" name="time" class="text1 a" 	autocomplete="off"/>
+				<input type="button" value="提交" class="button button1 button3 text1 b" onclick="checkForm2()"/>
+			</form><br><br>
+		</div>	
+	</div>
+	<script type="text/javascript" src="js/checkForm.js"></script>
+	
+	<div style="height:260px;width:80%;float:right;" class="div2 div3">
+		<table border="1" cellpadding="5" class="table1" id="table1"></table>
+	</div>	
+	
+	
+	<div class="box">
+		<div id="pagination1" class="page fl" onclick="click()"></div>
+		<div class="info fl">
+			<p>当前页数：<span id="current1" class="a">1</span></p>
+		</div>
+	</div>
+	
+	<div  id="update" style="display:none">
+		<form style="text-align:center">
+			<p class="text4">用户更新页面</p>
+			<input type="text" id="CID" hidden="hidden"/><br>
+			账 户：<input type="text" id="account"/><br>
+			公 司：<input type="text" id="company"/><br>					
+			电 话：<input type="text" id="mobile"/><br>
+			电 话：<input type="text" id="mobile1111"/><br>
+			地 址：<input type="text" id="address"/><br>
+			省 份：<input type="text" id="province"/><br>
+			邮 编：<input type="text" id="zip"/><br>	
+			电 话：<input type="text" id="tel"/><br>
+			传 真：<input type="text" id="fax"/><br>
+			姓 名：<input type="text" id="name"/><br>
+			密 码：<input type="password" id="password"/><br>
+			问 题：<input type="text" id="question"/><br>
+			回 答：<input type="text" id="answer"/><br>
+			笔 记：<input type="text" id="note"/><br>
+			<input type="button" value="确认更新" class="text3" onclick="update()"/><br>
+		</form>
+	</div>
+	<script type="text/javascript" src="js/page.js"></script>		
+	<div style="height:260px;width:80%;float:right;" class="div2 div3">
+		<table border="1" cellpadding="5" class="table2" id="table2"></table>
+	</div>
+			 
+</body>
+</html>

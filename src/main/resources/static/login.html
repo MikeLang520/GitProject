@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html  lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Users管理系统</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<link href="css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+<link href="css/login.min.css" th:href="@{/css/login.min.css}" rel="stylesheet"/>
+<script>
+		function checkForm(){
+			var uvalue = document.getElementById("usn").value;
+			var pvalue = document.getElementById("rpwd").value;
+			if(uvalue=="" || pvalue==""){
+				alert("用户姓名或用户密码不能为空！");
+				document.location.reload();
+				return false;
+			}else{
+				var usn = $("#usn").val();
+	    		var rpwd = $("#rpwd").val();
+	    		var data = {
+	    				"userName":usn,
+	    				"pwd":rpwd,
+	    		}
+	    		$.ajax({
+	    			type:"post",
+	    			url:"users/login",
+	    			async:true,
+	    			cache:true,
+	    			data:data,
+	    			success:function(data){
+	    				if(data.code == 0){
+	    					alert("恭喜你，登录成功!!")
+	    					location.href = "Page.html";
+	    				}else{
+	    					alert("用户名或密码有误")
+	    					location.href = "login.html";
+	    				}
+	    			},
+	    			error:function(){
+	    				alert("用户名或者密码有误");
+	    				location.href = "login.html";
+	    			}
+	    		});
+			}
+		}
+</script>
+</head>
+<body class="signin">
+    <div class="signinpanel">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="signin-info">
+                    <div class="logopanel m-b">
+                        <h1><img alt="[ NumberOne ]" src="img/profile.jpg"></h1>
+                    </div>
+                    <div class="m-b"></div>
+                    <h4>欢迎使用 <strong>User 后台管理系统</strong></h4>
+                   	<br><br><br><br>
+                    <strong>管理员？直接登录&raquo;</a></strong>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <form id="signupForm">
+					<h4 class="no-margins">登  录：</h4>
+					<h6>南方数码专业开发</h6>
+					<input type="text" name="userName" id="usn" placeholder="用户名"  class="form-control uname"/><br>
+					<input type="password" name="pwd" id="rpwd" placeholder="密码"    class="form-control pword"/><br>
+					<input type="button" value="登录"  onclick="checkForm()" class="btn btn-success btn-block" />
+				</form>
+            </div>
+        </div>
+        <div class="signup-footer">
+            <div class="pull-left">
+                &copy; 2019 All Rights Reserved. numberone!<br>
+                <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">南方数码科技</a><br>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+ 
+ 
+  
+ 

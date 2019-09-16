@@ -1,0 +1,52 @@
+#a {
+	background: url(/img/login-background.jpg) no-repeat;
+	background-position: center;
+	background-size : cover;
+}
+
+form {
+	border: #FF0000;
+}
+
+.text1{
+	margin:2px 14px;
+	padding: 2px 29px;
+	font-size:22px;
+	border-radius: 8px;
+}
+.text2{
+	margin:2px 709px;
+	padding: 2px 79px;
+	font-size:22px;
+	border-radius: 8px;
+}
+
+.text3 {
+		margin:11px 770px;
+	    background-color: #4CAF50; /* Green */
+	    border: none;
+	    color: white;
+	    padding:2px 79px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 22px;
+	    border-radius: 8px;
+	    cursor: pointer;
+	    -webkit-transition-duration: 0.4s; /* Safari */
+	    transition-duration: 0.4s;
+	}
+
+.text3 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.text3:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+				
+.text4{
+	margin:37px 41px 8px 710px;
+	font-size:22px;
+	color:green;
+}

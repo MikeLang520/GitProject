@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.southgis.imap.maintain.mapper.UsersMapper">
+	<select id="selectSmsInfoByCreatetime" resultType="SmsInfo">
+		select CID,Caccount,Ccompany,Cmobile,Cmobile1111,Caddress,Cprovince,Ctel,Cfax,Cname,Cpassword,
+		Cquestion,Canswer,Cnote,createtime from SmsInfo where createtime > #{createtime} 
+		
+	</select>
+	
+	<select id="searchByAccount" resultType="SmsInfo">
+		select CID,Caccount,Ccompany,Cmobile,Cmobile1111,Caddress,Cprovince,Ctel,Cfax,Cname,Cpassword,
+		Cquestion,Canswer,Cnote,createtime from SmsInfo where Caccount like #{Caccount}
+	</select>
+	
+	<select id="groupByCompany" parameterType="SmsInfo" resultType="SmsInfo">
+		SELECT 
+			Ccompany as Ccompany,
+			count(CID) as CID
+		FROM
+			SmsInfo
+			
+		WHERE
+			createtime > #{createtime}
+			
+		GROUP BY
+			Ccompany
+		ORDER BY
+			CID desc
+	</select>
+	
+</mapper>

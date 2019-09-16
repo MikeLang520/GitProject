@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.southgis.imap.maintain.mapper.SendMessageMapper">
+	<insert id="add" parameterType="SendMessage">
+		insert into SendMessage(smid,company,org,dest,
+		senddata,insert_date,status,msg_group,report_status,error_code,receive_date,send_date) values(#{smid},
+		#{company},#{org},#{dest},#{senddata},#{insertDate},#{status},#{msgGroup},
+		#{reportStatus},#{errorCode},#{receiveDate},#{sendDate})
+	</insert>
+
+	<select id="GroupBySend" resultType="SendMessage">
+		SELECT
+			company as company,
+			count(*) as id
+		FROM
+			SendMessage 
+		WHERE
+			insert_date > #{insertDate}
+		GROUP BY
+			company
+		ORDER BY
+			id desc
+	    limit 10
+	</select>
+	
+	<select id="SendFail" resultType="SendMessage">
+		SELECT
+			company as company,
+			count(*) as id
+		FROM
+			SendMessage
+		WHERE	
+			insert_date > #{insertDate} and dest = 'fail'
+		GROUP BY
+			company
+		ORDER BY
+			id desc
+		limit 10
+		
+	</select>
+		
+	<select id="sendTop" resultType="SendMessage">
+		SELECT
+			company as company,
+			count(*) as id
+		FROM
+			SendMessage 
+		WHERE
+			insert_date > #{insertDate}
+		GROUP BY
+			company
+		ORDER BY
+			id desc
+	    limit 10
+	</select>
+	
+	<select id="findCount" resultType="Integer">
+		SELECT 
+			count(*) as id
+		FROM
+			SendMessage
+		WHERE
+			insert_date > #{insertDate}
+	</select> 
+	
+	<select id="findAllBytime" resultType="Integer">
+		SELECT
+			count(*) as id
+		FROM
+			SendMessage
+		WHERE
+			insert_date > #{insertDate}
+	</select>
+	
+	<select id="findAllBytime2" resultType="SendMessage">
+		SELECT
+			company as company,
+			insert_date as insertDate,
+			count(*) as id
+		FROM
+			SendMessage
+		WHERE
+			insert_date > #{insertDate}
+		GROUP BY
+			company
+		ORDER BY
+			id desc
+	</select>
+	
+	<select id="findByInsertFail" resultType="Integer">
+		SELECT 
+			count(*) as id
+		FROM
+			SendMessage
+		WHERE
+			insert_date > #{insertDate} and dest = 'fail'
+	</select>
+	
+	
+	
+	
+</mapper>
